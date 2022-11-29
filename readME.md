@@ -1,8 +1,14 @@
 # FIRST BETA OF MAGICAL t-SNE plotter
 
-![Screenshot][demo.png]
-![Screenshot][pandas.png]
-thanks to myself, Simone Alghisi, Giovanni Ambrosi and Filippo Daniotti for inspiration and extensive testing
+![Screenshot](demo.png)
+![Screenshot](pandas.png)
+
+thanks to:
+* myself
+*  [Simone Alghisi](https://github.com/Simone-Alghisi/Simone-Alghisi)
+*  [Giovanni Ambrosi]()
+*  [Filippo Daniotti]()
+for inspiration and extensive testing
 
 ```
 def eval_plot_source_target(model: nn.Module,
