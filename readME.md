@@ -71,4 +71,10 @@ Example of invalid model
 * target_loader : Target dataloader. Expects a simple loader of which each element is ```Tuple(input,output)``` and ```input``` of a shape ```[batch_size,any]```. ```output``` should be ```[batch_size,]```
 * class_mapping : a Dictionary that contains ```{'back_pack':0,'purse':1...}``` for each ```string``` that represents the class, it's corresponding ```int``` in the dataloader
 * device : where to execute the code. Default on ```cpu```
+* callback_fn: **REQUIRED!** a function to map the output of your model to a standard ```[batch_size,]``` where each item correspond to the prediction for that sample. Example of function that maps a non-argmaxed  ```[batch_size,num_classes]```result to a argmaxed ```[batch_size,]```result
+```
+def callback_sample(input:Tensor) -> Tensor:
+    output = torch.argmax(input,axis=1)
+    return output
+```
 * colormap : dictionary of ```Dict[int,Tuple[int,int,int]]``` where for each ```int``` that represent each class is provided a HEX color. Optional. If not given a **perfect** rainbow will be generated
