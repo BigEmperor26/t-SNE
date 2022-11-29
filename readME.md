@@ -1,5 +1,7 @@
 # FIRST BETA OF MAGICAL t-SNE plotter
 
+![Screenshot][demo.png]
+![Screenshot][pandas.png]
 thanks to myself, Simone Alghisi, Giovanni Ambrosi and Filippo Daniotti for inspiration and extensive testing
 
 ```
