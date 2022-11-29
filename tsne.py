@@ -36,7 +36,7 @@ def eval_plot_source_target(model: nn.Module,
                             source_loader: Iterable,
                             target_loader: Iterable,
                             class_mapping: Dict[str,int],
-                            device: str ='cpu',callback_fn=None, colormap = None) -> None:
+                            device: str ='cpu',callback_fn=None, colormap:Dict[int,Tuple[int,int,int]] = None ) -> None:
     
     class Extractor(nn.Module):
         def __init__(self, model: nn.Module):
